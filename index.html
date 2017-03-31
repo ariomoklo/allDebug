@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ario Widiatmoko">
+
+        <title>Pavement Slab Calc</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="m-head">
+            <h1>Pavement Slab Calc</h1>
+        </div>
+        <div class="m-body">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="box-panel col-md-6 col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 col-md-2 control-label">Fs</label>
+                                <div class="col-sm-10 col-md-8">
+                                    <input type="number" class="form-control" id="fs" placeholder="Flexural Strength">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 col-md-2 control-label">k (psi)</label>
+                                <div class="col-sm-10 col-md-8">
+                                    <select class="form-control" id="k">
+                                        <option value="null">Pilih nilai k (psi)</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="200">200</option>
+                                        <option value="300">300</option>
+                                        <option value="400">400</option>
+                                        <option value="500">500</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 col-md-2 control-label">kips</label>
+                                <div class="col-sm-10 col-md-8">
+                                    <select class="form-control" id="kips">
+                                        <option value="null">Pilih nilai Axle Load</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="75">75</option>
+                                        <option value="100">100</option>
+                                        <option value="120">120</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 col-md-2 control-label">Vp</label>
+                                <div class="col-sm-10 col-md-8">
+                                    <select class="form-control" id="vp">
+                                        <option value="null">Pilih nilai Vehicle Passes</option>
+                                        <option value="10">10.000</option>
+                                        <option value="50">50.000</option>
+                                        <option value="100">100.000</option>
+                                        <option value="500">500.000</option>
+                                        <option value="1.000">1.000.000</option>
+                                        <option value="5.000">5.000.000</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-panel col-md-6 col-12">
+                        <table class="table">
+                            <tr>
+                                <td><b>Fs</b></td>
+                                <td class="fs">-</td>
+                                <td><b>k</b></td>
+                                <td class="k">-</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kips</b></td>
+                                <td class="kips">-</td>
+                                <td><b>Vp</b></td>
+                                <td class="vp">-</td>
+                            </tr>
+                        </table>
+                        <div class="result-panel">
+                            <center>
+                                <h1><b class="in">-</b></h1>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="about">
+                    <div class="container">
+                        <div class="row">
+                            
+                        </div>
+                    </div>  
+                </div>
+              </div>
+        </div>
+    </body>
+    
+    <!-- Mainly scripts -->
+    <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="test.js"></script>
+</html>
