@@ -18,9 +18,9 @@ body{
 }
 
 .watermark > h1{
-    font-size: 40px;
+    font-size: 30px;
     padding: 0px;
-    padding-top: 200px;
+    padding-top: 150px;
     margin: 0px;
 }
 
@@ -42,14 +42,14 @@ body{
 .header > h1 {
     padding: 5px;
     margin: 0px;
-    font-size: 50px;
+    font-size: 35px;
     color: aliceblue;
 }
 
 .header > p {
     margin: 0px;
     padding-left: 5px;
-    font-size: 25px;
+    font-size: 20px;
     color: lightgray;
 }
 
@@ -76,7 +76,7 @@ body{
 
 .input-group > label {
     width: 30%;
-    font-size: 20px;
+    font-size: 15px;
     color: burlywood;
     font-weight: bolder;
     padding-bottom: 15px;
@@ -84,15 +84,15 @@ body{
 
 .input-group > input {
     width: 100%;
-    height: 40px;
+    height: 30px;
     text-align: center;
     border-radius: 5px;
 }
 
 .input-group > button {
-    margin-top: 25px;
+    margin-top: 20px;
     width: 100%;
-    height: 40px;
+    height: 30px;
     text-align: center;
     border-radius: 5px;
 }
@@ -126,14 +126,14 @@ h2{
 .flow-group > label{
     padding-right: 5%;
     padding-left: 5%;
-    font-size: 20px;
+    font-size: 15px;
     color: burlywood;
     font-weight: bolder;
 }
 
 .flow-group > input{
     width: 85%;
-    height: 40px;
+    height: 30px;
     padding-left: 10px;
     border-radius: 5px;
 }
@@ -160,7 +160,7 @@ h2{
 .time-input > button {
     margin-top: 25px;
     width: 15%;
-    height: 40px;
+    height: 30px;
     text-align: center;
     border-radius: 5px;
 }
