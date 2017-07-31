@@ -126,6 +126,11 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 					jobs[parseInt(thisJob) - 1].readyTime = mesin[cMachine].sumTime;
 				}
 			}
+			console.log('gantt nya :');
+			console.log(mesin[cMachine]);
+			
+			console.log('jobs nya :');
+			console.log(jobs[parseInt(thisJob) - 1]);
 		}
 	}
 	

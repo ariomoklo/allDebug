@@ -89,6 +89,9 @@
 //                $('.flow-input').append(flowGroup);
 //            }
             
+			// tutup hasil
+			$('.result').slideUp();
+			
             // tampilin form input flow
             $('.flow-input').slideDown(); 
             
@@ -112,17 +115,35 @@
 			console.log(jobFlow);
 			console.log(proses);
 			
+			ij = 1;
 			for(x in jobFlow){
-				printOut('tableDeklarasi', [{ nama: 'Job '+ ( parseInt(x) + 1) +' Flow', msg: jobFlow[x].toString() }]);
+				printOut('tableDeklarasi', [{ nama: 'Job '+ (ij++) +' Flow', msg: jobFlow[x].toString() }]);
 			}
 			
+			ij = 1;
 			for(x in proses){
-				printOut('tableDeklarasi', [{ nama: 'Job'+ ( parseInt(x) + 1) +'/Machine Time', msg: proses[x].toString() }]);
+				printOut('tableDeklarasi', [{ nama: 'Job'+ (ij++) +'/Machine Time', msg: proses[x].toString() }]);
 			}
 			
             // generate random number
             var numbs = generateMatriks(firefly, job * machine);
 			var dTable = diskritTable(numbs, job);
+			
+			ij = 1;
+			for(x in numbs){
+				angka = new Array();
+				for(y in numbs[x]){
+					angka[y] = numbs[x][y].number;
+				}
+				msg = JSON.stringify(angka);
+				$('#tableGenerate').append('<tr><td>Random Float'+(ij++)+' for firefly</td><td>'+msg+'</td>');
+			}
+			
+			ij = 1;
+			for(x in dTable){
+				msg = JSON.stringify(getDNum(dTable, x));
+				$('#tableGenerate').append('<tr><td>Firefly'+(ij++)+' Diskrit</td><td>'+msg+'</td>');
+			}
 			
 			$('.result').slideDown();
 			
@@ -133,7 +154,7 @@
 			var f1 = getDNum(dTable, 0);
 			console.log(f1);
 			
-			printOut('tableDeklarasi', [{ nama: 'makespan', msg: runGantt(f1, jobFlow, proses, machine, job) }])
+			//printOut('tableDeklarasi', [{ nama: 'makespan', msg: runGantt(f1, jobFlow, proses, machine, job) }]);
         });
     </script>
 </html>
