@@ -90,31 +90,16 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 		thisMachine = parseInt(flow[parseInt(thisJob) - 1][jobs[parseInt(thisJob) - 1].index]);
 		console.log('current Machine: '+thisMachine);
 		
-		console.log('before job '+thisJob+' :');
-		console.log(jobs[parseInt(thisJob) - 1]);
-		
 		// jika nilai mesin tidak kosong ( tidak masuk mesin manapun )
 		if(parseInt(thisMachine) != 0){
 			cMachine = parseInt(thisMachine) - 1;
 			neededTime = time[parseInt(thisJob) - 1][cMachine];
 			console.log('Time needed for this job: '+neededTime);
 			
-			// jika total waktu pada mesin masih 0
-			if(mesin[cMachine].sumTime == 0){
-				mesin[cMachine].sumTime = neededTime;
-				mesin[cMachine].jobTime = neededTime;
-				mesin[cMachine].job = thisJob;
-				
-				jobs[parseInt(thisJob) - 1].index++;
-				jobs[parseInt(thisJob) - 1].lastMachine = cMachine;
-				jobs[parseInt(thisJob) - 1].readyTime = mesin[cMachine].sumTime;
-				
-				console.log('gantt nya 0 :');
-				console.log(mesin[cMachine]);
-			}else{
 				sumTime = mesin[cMachine].sumTime;
 				ready = jobs[parseInt(thisJob) - 1].readyTime;
 				
+				// cek jobnya siap dilakukan apa belum
 				if(ready <= sumTime){
 					mesin[cMachine].sumTime += neededTime;
 					mesin[cMachine].jobTime = neededTime;
@@ -123,10 +108,8 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 					jobs[parseInt(thisJob) - 1].index++;
 					jobs[parseInt(thisJob) - 1].lastMachine = cMachine;
 					jobs[parseInt(thisJob) - 1].readyTime = mesin[cMachine].sumTime;
-				}else{
-					spaceTime = sumTime - ready;
-					
-					mesin[cMachine].sumTime += ( neededTime + spaceTime );
+				}else{					
+					mesin[cMachine].sumTime = ( neededTime + ready );
 					mesin[cMachine].jobTime = neededTime;
 					mesin[cMachine].job = thisJob;
 
@@ -137,19 +120,18 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 				
 				console.log('gantt nya :');
 				console.log(mesin[cMachine]);
-			}
-			
-			console.log('after job '+thisJob+' :');
-			console.log(jobs[parseInt(thisJob) - 1]);
+				console.log(jobs[parseInt(thisJob) - 1]);
 		}
 	}
 	
-	makespan = 0;
-	for(index in mesin){
-		if(mesin[index].sumTime > makespan){
-			makespan = { gantt:mesin[index], mesin:index };
+	makespan = { gantt:mesin[0].sumTime, mesin:1 };
+	
+	for(var index = 0; index < mesin.length; index++){
+		if(makespan.gantt <= mesin[index].sumTime){
+			makespan = { gantt:mesin[index].sumTime, mesin: index + 1 };
 		}
 	}
 	
+	console.log(makespan);
 	return makespan;
 }

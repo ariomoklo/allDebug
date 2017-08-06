@@ -178,8 +178,10 @@
 				console.log('start');
 				
 				mkspan = runGantt(ffly, jobFlow, proses, machine, job);
+				console.log('gantt chart terbesar :');
+				console.log(mkspan);
 				$('.output').append(cT('ffly'+(ij), 'Firefly '+(ij)+' Gantt', 'Gantt Chart of Generated Firefly '+(ij)+''));
-				printOut('ffly'+ij	, [{ nama: 'makespan', msg: mkspan.gantt.sumTime }]);
+				printOut('ffly'+ij	, [{ nama: 'makespan', msg: mkspan.gantt }]);
 				printOut('ffly'+ij	, [{ nama: 'Mesin ke', msg: parseInt(mkspan.mesin) + 1 }]);
 				ij++;
 			}
