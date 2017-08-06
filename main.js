@@ -66,16 +66,19 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 	var jobs = new Array();
 	
 	for(a=0; a<machine; a++){
-		mesin[a] = new Array();
-		mesin[a][0] = { sumTime: parseInt(0), jobTime: parseInt(0), job: parseInt(0) };
+		mesin[a] = { sumTime: parseInt(0), jobTime: parseInt(0), job: parseInt(0) };
 	}
+	
+	console.log('Mesin after build :');
+	console.log(mesin);
 	
 	for(b=0; b<jobTotal; b++){
-		jobs[b] = new Array();
-		jobs[b][0] = { index: parseInt(0), lastMachine: parseInt(0), readyTime: parseInt(0) };
+		jobs[b] = { index: parseInt(0), lastMachine: parseInt(0), readyTime: parseInt(0) };
 	}
 	
-	console.log(mesin);
+	console.log('Jobs after build :');
+	console.log(jobs);
+	
 	console.log(flow);
 	
 	for(x in sequence){
@@ -84,8 +87,11 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 		console.log('current Job: '+thisJob);
 		
 		// ambil no mesin yg digunakan pada urutan job flow tersebut job[no job][order]
-		thisMachine = parseInt(flow[parseInt(thisJob) - 1][parseInt(thisJob)-1]);
+		thisMachine = parseInt(flow[parseInt(thisJob) - 1][jobs[parseInt(thisJob) - 1].index]);
 		console.log('current Machine: '+thisMachine);
+		
+		console.log('before job '+thisJob+' :');
+		console.log(jobs[parseInt(thisJob) - 1]);
 		
 		// jika nilai mesin tidak kosong ( tidak masuk mesin manapun )
 		if(parseInt(thisMachine) != 0){
@@ -102,6 +108,9 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 				jobs[parseInt(thisJob) - 1].index++;
 				jobs[parseInt(thisJob) - 1].lastMachine = cMachine;
 				jobs[parseInt(thisJob) - 1].readyTime = mesin[cMachine].sumTime;
+				
+				console.log('gantt nya 0 :');
+				console.log(mesin[cMachine]);
 			}else{
 				sumTime = mesin[cMachine].sumTime;
 				ready = jobs[parseInt(thisJob) - 1].readyTime;
@@ -125,11 +134,12 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 					jobs[parseInt(thisJob) - 1].lastMachine = cMachine;
 					jobs[parseInt(thisJob) - 1].readyTime = mesin[cMachine].sumTime;
 				}
+				
+				console.log('gantt nya :');
+				console.log(mesin[cMachine]);
 			}
-			console.log('gantt nya :');
-			console.log(mesin[cMachine]);
 			
-			console.log('jobs nya :');
+			console.log('after job '+thisJob+' :');
 			console.log(jobs[parseInt(thisJob) - 1]);
 		}
 	}
@@ -137,7 +147,7 @@ function runGantt(sequence, flow, time, machine, jobTotal){
 	makespan = 0;
 	for(index in mesin){
 		if(mesin[index].sumTime > makespan){
-			makespan = mesin[index];
+			makespan = { gantt:mesin[index], mesin:index };
 		}
 	}
 	
