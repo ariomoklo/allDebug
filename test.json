@@ -1,0 +1,17 @@
+[
+    { 
+        "periode"   : "4d",
+        "time"      : "aa",
+        "status"    : "up"
+    },
+    { 
+        "periode"   : "1d",
+        "time"      : "bb",
+        "status"    : "down"
+    },
+    { 
+        "periode"   : "~",
+        "time"      : "cc",
+        "status"    : "up"
+    }
+]
