@@ -1,0 +1,198 @@
+{
+    "prtg-version": "17.1.30.1681",
+    "treesize": 24,
+    "histdata": [
+    {
+    "datetime": "20/09/2017 0:00:00 - 1:00:00",
+    "datetime_raw": 42997.75,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 1:00:00 - 2:00:00",
+    "datetime_raw": 42997.7916666667,
+    "value": "12 %",
+    "value_raw": 12.40,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 2:00:00 - 3:00:00",
+    "datetime_raw": 42997.8333333333,
+    "value": "47 %",
+    "value_raw": 47.25,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 3:00:00 - 4:00:00",
+    "datetime_raw": 42997.875,
+    "value": "79 %",
+    "value_raw": 79,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 4:00:00 - 5:00:00",
+    "datetime_raw": 42997.9166666667,
+    "value": "100 %",
+    "value_raw": 100,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 5:00:00 - 6:00:00",
+    "datetime_raw": 42997.9583333333,
+    "value": "100 %",
+    "value_raw": 100,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 6:00:00 - 7:00:00",
+    "datetime_raw": 42998,
+    "value": "100 %",
+    "value_raw": 100,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 7:00:00 - 8:00:00",
+    "datetime_raw": 42998.0416666667,
+    "value": "100 %",
+    "value_raw": 100,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 8:00:00 - 9:00:00",
+    "datetime_raw": 42998.0833333333,
+    "value": "97 %",
+    "value_raw": 97.47,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 9:00:00 - 10:00:00",
+    "datetime_raw": 42998.125,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 10:00:00 - 11:00:00",
+    "datetime_raw": 42998.1666666667,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 11:00:00 - 12:00:00",
+    "datetime_raw": 42998.2083333333,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 12:00:00 - 13:00:00",
+    "datetime_raw": 42998.25,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 13:00:00 - 14:00:00",
+    "datetime_raw": 42998.2916666667,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 14:00:00 - 15:00:00",
+    "datetime_raw": 42998.3333333333,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 15:00:00 - 16:00:00",
+    "datetime_raw": 42998.375,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 16:00:00 - 17:00:00",
+    "datetime_raw": 42998.4166666667,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 17:00:00 - 18:00:00",
+    "datetime_raw": 42998.4583333333,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 18:00:00 - 19:00:00",
+    "datetime_raw": 42998.5,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 19:00:00 - 20:00:00",
+    "datetime_raw": 42998.5416666667,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 20:00:00 - 21:00:00",
+    "datetime_raw": 42998.5833333333,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 21:00:00 - 22:00:00",
+    "datetime_raw": 42998.625,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 22:00:00 - 23:00:00",
+    "datetime_raw": 42998.6666666667,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    },
+    {
+    "datetime": "20/09/2017 23:00:00 - 0:00:00",
+    "datetime_raw": 42998.7083333333,
+    "value": "0 %",
+    "value_raw": 0,
+    "coverage": "100 %",
+    "coverage_raw": 10000
+    }
+    ]
+}

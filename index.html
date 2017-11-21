@@ -6,34 +6,56 @@
     <title>Uptime calculator</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+        body{
+            margin: 20px;
+        }
+
+        .row{
+            margin-bottom: 20px;
+        }
+
+        .output{
+            background-color: lightgrey;
+            border-radius: 5px;
+            padding: 10px;
+            min-height: 400px;
+        }
+
+        #chartdiv{
+            width: 100%;
+            height: 500px;
+        }
+
+        .row.graph{
+            background-color: #30303d;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col">
-                <a href="test.json" class="btn btn-primary">Check Data</a>
-                <button id="start" class="btn btn-success">Get Uptime</button>
+                <h3>Demo PRTG Historical API to Uptime Data</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col jumbotron">
-                <div id="output"></div>
+            <div class="col">
+                <p>Ini hanya demo yang digunakan untuk melihat hasil analisa dari kebenaran asumsi mengenai pengolahan data riwayat ping dari prtg menjadi sebuah data uptime dan downtime. Demo ini dibuat oleh PT. GTech Indonesia.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="waver.html" class="btn btn-primary">Connection Waver</a>
+                <a href="bad.html" class="btn btn-warning">Bad Connection</a>
+                <a href="down.html" class="btn btn-danger">Power Down</a>
             </div>
         </div>
     </div>
-    
-
-    <!-- <table id="output">
-        <tr>
-            <th>durasi</th>
-            <th>time</th>
-            <th>status</th>
-        </tr>
-    </table> -->
-
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script src="uptime.js"></script>
 </html>
