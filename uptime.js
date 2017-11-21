@@ -7,7 +7,6 @@ function echo(text){
 
     p.innerHTML = text;
     out.appendChild(p);
-    out.appendChild(document.createElement("br"));
 };
 
 get.addEventListener("click", function(){
@@ -15,16 +14,17 @@ get.addEventListener("click", function(){
     xhhtp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             var data = JSON.parse(this.response);
+            console.debug(data);
 
-            var last    = data[0].histdata.value_raw;
+            var last    = data.histdata[0].value_raw;
             var current = 0;
             var chcount = 0;
             var upcount = 0;
             var docount = 0;
-
-            var prep = "";
-            for (i = 0; i < data.length; i++) {
-                current = data[i].histdata.value_raw;
+            
+            for (i = 0; i < data.histdata.length; i++) {
+                current = data.histdata[i].value_raw;
+                var prep = data.histdata[i].datetime + "; " + current + "; ";
                 if(current != 0){
                     if(current == 100){
                         if(last < 100){
@@ -46,7 +46,6 @@ get.addEventListener("click", function(){
                         chcount++;
                         // counting change in ping
                     }else{
-                        chcount = 0;
                         if(chcount > 0){
                             // bad connection
                             prep += "bad connection; ";
@@ -54,6 +53,8 @@ get.addEventListener("click", function(){
                             // power down
                             prep += "power down; ";
                         }
+
+                        chcount = 0;
                     }
                 }else{
                     if(last != 0){
@@ -65,10 +66,15 @@ get.addEventListener("click", function(){
                             upcount++;
                             prep += "server running; ";
                         }
+                    }else{
+                        upcount++;
+                        prep += "server running; ";
                     }
                 }
 
+                prep += "ch: "+chcount+"; up: "+upcount+"; down: "+docount;
                 echo(prep);
+                last = current;
             }
         }     
     };
