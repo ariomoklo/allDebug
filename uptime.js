@@ -1,4 +1,4 @@
-var req = document.getElementById("request");
+//var req = document.getElementById("request");
 var get = document.getElementById("start");
 var out = document.getElementById("output");
 
@@ -79,6 +79,6 @@ get.addEventListener("click", function(){
         }     
     };
 
-    xhhtp.open("GET", req.value, true);
+    xhhtp.open("GET", "test.json", true);
     xhhtp.send();
 });
